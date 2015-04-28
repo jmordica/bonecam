@@ -17,7 +17,7 @@ fi
 echo "Starting video streaming server to $1:$2"
 
 # Logitech C920
-/opt/bonecam/bin/gst-launch-1.0 -v -e \
+gst-launch-1.0 -v -e \
     uvch264src initial-bitrate=3000000 average-bitrate=3000000 \
     iframe-period=5000 device=/dev/video0 name=src auto-start=true src.vidsrc ! \
     video/x-h264,width=1280,height=720,framerate=30/1 ! h264parse ! \

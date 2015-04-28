@@ -5,9 +5,9 @@ VPORT=40000
 APORT=41000
 
 # start video server
-/opt/bonecam/bin/videosrv.sh $DEST $VPORT  &
+/opt/bonecam/bin/videosrv.sh $DEST $VPORT
 # NB: Remove the trailing "&" above if the audio is disabled
 
 # start audio
-exec /opt/bonecam/bin/audiosrv.sh $DEST $APORT
+#exec /opt/bonecam/bin/audiosrv.sh $DEST $APORT
 
